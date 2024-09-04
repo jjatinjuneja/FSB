@@ -1,0 +1,8 @@
+Name,Value,Description
+ProcessName,DepositAdminPorcess
+AccountType,CD
+Secured_Mailbox,https://ex.ssm.echoworx.net/login.html
+Secured_Password,BlueMountain2023
+Synapsys_Username,S22XJJUN
+Synapsys_Password,Welcome24
+Synergy_OfficerCode,RQekky*UujWb7AS7PBccqa@WQgibcMYi

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CD_CustomerIdentificationTab" this:CD_CustomerIdentificationTab.Pdf_Path="[&quot;C:\Users\xjjuneja\Documents\FSB\Data\silverlake_dl\dl1&quot; + &quot;.pdf&quot;]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CD_CustomerIdentificationTab" this:CD_CustomerIdentificationTab.Pdf_Path="C:\Users\xjjuneja\Documents\FSB\Data\silverlake_dl\dl2.pdf" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="io_dtCollection" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="LogFilePath" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1239,3341</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,3636</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CD_CustomerIdentificationTab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -122,15 +122,11 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Common XAML for both DD and CD account" DisplayName="CD_CustomerIdentificationTab" sap:VirtualizedContainerService.HintSize="616,3236" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Common XAML for both DD and CD account" DisplayName="CD_CustomerIdentificationTab" sap:VirtualizedContainerService.HintSize="616,3571" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ID_strssuedDate" />
       <Variable x:TypeArguments="x:String" Name="ID_strExpirationDate" />
-      <Variable x:TypeArguments="x:String" Name="Pdf_Path">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">C:\Users\xjjuneja\Documents\FSB\Data\silverlake_dl\dl1.pdf</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="C:\Users\xjjuneja\Documents\FSB\Data\silverlake_dl\dl1.pdf" Name="Pdf_Path" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_dl_WindowOpened" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_PrintPreview_Id" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_print_ID" />
@@ -487,7 +483,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:WindowScope>
     <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="554,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SilverlakeDL_Information.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="554,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SilverlakeDL_Information.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SilverlakeDL_Information - Copy.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="554,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="SilverlakeDL_Information - Copy.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="x:String" x:Key="in_str_DL_PDF_Path">
           <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Pdf_Path" />
@@ -500,6 +496,24 @@
         </InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="554,335" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SilverlakeDL_Information.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,136" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SilverlakeDL_Information.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InOutArgument x:TypeArguments="x:String" x:Key="in_str_DL_PDF_Path">[Pdf_Path]</InOutArgument>
+              <InOutArgument x:TypeArguments="x:String" x:Key="LogFilePath">[LogFilePath]</InOutArgument>
+              <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtCollection">[io_dtCollection]</InOutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="554,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="Sequence_12">
